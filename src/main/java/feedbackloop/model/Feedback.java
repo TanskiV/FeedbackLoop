@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -27,6 +28,7 @@ public class Feedback implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	String message;
+	@Id
 	LocalDate date;
 	
 }
