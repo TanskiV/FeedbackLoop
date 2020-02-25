@@ -23,8 +23,8 @@ public class FeedbackController {
 	}
 	
 	@GetMapping("/{message}")
-	public FeedbackDto findMessage(@PathVariable String messaString) {
-		return feedbackService.findByMessage(messaString);
+	public FeedbackDto findMessage(@PathVariable String message) {
+		return feedbackService.findByMessage(message);
 	}
 
 }

@@ -7,22 +7,19 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-@AllArgsConstructor
+
 @NoArgsConstructor
 @Getter
 @Setter
-@Builder
-@EqualsAndHashCode(of = {"date"})
+@EqualsAndHashCode(of = { "date" })
 @Entity
 @Table(name = "feedbacks")
 //@Inheritance(strategy = InheritanceType.JOINED)
-public class Feedback implements Serializable{
+public class Feedback implements Serializable {
 	/**
 	 * 
 	 */
@@ -30,5 +27,10 @@ public class Feedback implements Serializable{
 	String message;
 	@Id
 	LocalDate date;
-	
+	public Feedback(String message) {
+		super();
+		this.message = message;
+		this.date = LocalDate.now();
+	}
+
 }

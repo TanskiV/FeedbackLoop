@@ -2,8 +2,6 @@ package feedbackloop.dto;
 
 import java.time.LocalDate;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -20,5 +18,4 @@ import lombok.NoArgsConstructor;
 public class FeedbackDto {
 	String message;
 	LocalDate date;
-
 }
