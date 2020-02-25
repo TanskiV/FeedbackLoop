@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import feedbackloop.model.Feedback;
 
 public interface FeedbackRepository extends JpaRepository<Feedback, LocalDate>{
-	Feedback findByDate(LocalDate date);
+	Feedback findByDate(String date);
 	Feedback findByMessage(String message);
 	
 }

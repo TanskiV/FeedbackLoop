@@ -29,6 +29,6 @@ public class Feedback implements Serializable{
 	private static final long serialVersionUID = 1L;
 	String message;
 	@Id
-	LocalDate date;
+	String date;
 	
 }
