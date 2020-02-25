@@ -1,5 +1,7 @@
 package feedbackloop.dto;
 
+import java.time.LocalDate;
+
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 import lombok.AllArgsConstructor;
@@ -12,11 +14,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME,
-							include = JsonTypeInfo.As.PROPERTY,
-							property = "type")
+//@JsonTypeInfo(use = JsonTypeInfo.Id.NAME,
+//							include = JsonTypeInfo.As.PROPERTY,
+//							property = "type")
 public class FeedbackDto {
 	String message;
-	String date;
+	LocalDate date;
 
 }

@@ -14,7 +14,7 @@ public class FeedbackImpl implements FeedbackService {
 
 	@Override
 	public boolean addFeedback(FeedbackDto feedbackDto) {
-		if (feedbackRepository.exists(feedbackDto.getDate())) {
+		if (feedbackRepository.existsById(feedbackDto.getDate())) {
 			return false;
 		}
 		Feedback feedback = convertToFeedback(feedbackDto);
